@@ -1,0 +1,8 @@
+CREATE TABLE People
+(
+    Id SERIAL PRIMARY KEY,
+    PeopleName CHARACTER VARYING(30),
+    Surname CHARACTER VARYING(30),
+    Age INTEGER,
+    Email CHARACTER VARYING(30)
+);
