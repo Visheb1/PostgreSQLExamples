@@ -1,0 +1,15 @@
+SELECT * FROM Diary
+ORDER BY MathGrade DESC, RussianGrade ASC
+LIMIT 5;
+
+SELECT * FROM Diary
+ORDER BY RussianGrade DESC
+LIMIT 4 OFFSET 6;
+
+SELECT * FROM Student
+ORDER BY Gender
+OFFSET 5;
+
+SELECT * FROM Student
+ORDER BY Gender
+OFFSET 5 LIMIT ALL;
