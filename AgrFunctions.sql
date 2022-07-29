@@ -16,8 +16,12 @@ SELECT SUM(Amount*Price) FROM PartyPreparation;
 
 ALTER TABLE PartyPreparation
 ADD Payment BOOL;
-INSERT INTO PartyPreparation(Payment) VALUES
-(TRUE),(FALSE),(TRUE),(FALSE),(TRUE),(FALSE),(FALSE),(TRUE),(TRUE),(FALSE);
+UPDATE PartyPreparation
+SET Payment = true
+WHERE id = 1 or id = 3 or id = 5 or id = 6 or id = 10;
+UPDATE PartyPreparation
+SET Payment = false
+WHERE id = 2 or id = 4 or id = 7 or id = 8 or id = 9;
 
 SELECT BOOL_OR(Payment) FROM PartyPreparation;
 SELECT BOOL_AND(Payment) FROM PartyPreparation;
